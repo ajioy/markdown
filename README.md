@@ -2,9 +2,9 @@
 
 
 ## 标题
-大标题，放在===上面
+大标题，内容放在===上面
 ===
-中标题，放在---上面
+中标题，内容放在---上面
 ---
 # 一级标题H1
 ## 二级标题H2
@@ -12,6 +12,20 @@
 #### 四级标题H4
 ##### 五级标题H5
 ###### 六级标题，不能再小了H6
+
+```
+## 标题
+大标题，内容放在===上面
+===
+中标题，内容放在---上面
+---
+# 一级标题H1
+## 二级标题H2
+### 三级标题H3
+#### 四级标题H4
+##### 五级标题H5
+###### 六级标题，不能再小了H6
+```
 
 ---
 ## 正文
@@ -33,15 +47,25 @@ _一个下划线斜体_
 ~~两个\~删除线~~  
 ***三个星号是粗斜体***  
 <u>下划线</u>  
+```
+<u>下划线</u>  
+```
 这是`高亮显示`  
+```
+这是`高亮显示`  
+```
 上标：X<sub>2</sub>，下标：O<sup>2</sup>  
 
-        hello, i am ajioy! a Tab in head (8 space in head)
+```
+上标：X<sub>2</sub>，下标：O<sup>2</sup>  
+```
+
+        hello, i am ajioy! a Tab in head (行首放8个空格)
         something important here 
 
 ---
 ## 引用
-> \>块引用  
+> 块引用  
 > 换行内容  
 > * 可以加列表
 
@@ -52,6 +76,13 @@ _一个下划线斜体_
 >>> 第三级引用
 >>>> 第四级引用
 
+```
+> 第一层引用
+> * 第一层引用加列表，行尾2个空格  
+> * 第一层引用加列表  
+>> 第二层引用
+>>> 第三层引用，依次类推
+```
 ---
 ## 列表  
 ### 无序列表 
@@ -59,10 +90,21 @@ _一个下划线斜体_
 - python
 + javascript
 
+```
+* c++
+- python
++ javascript
+```
 ### 有序列表
 1. apple
 2. orange
 3. banana
+
+```
+1. apple
+2. orange
+3. banana
+```
 
 ### 嵌套列表
 * first
@@ -73,11 +115,29 @@ _一个下划线斜体_
   * great
     * fantastic
 
+```
+* first
+  * second
+    1. third
+    2. third another
+* another one
+  * great
+    * fantastic
+
+```
 ### 任务待办
 - [x] 跑步
 - [x] 买日常用品
 - [ ] 数据备份
 - [ ] 买菜做饭
+
+```
+任务待办
+- [x] 跑步
+- [x] 买日常用品
+- [ ] 数据备份
+- [ ] 买菜做饭
+```
 ---
 
 ## 排版
@@ -86,64 +146,74 @@ _一个下划线斜体_
 * 半角的空格 &ensp; 或 &#8194; 半个中文，1字符<br>
 * 全角的空格 &emsp; 或 &#8195; 1个中文，2字符<br/>
 
-### 分割符
-三个减号，三个星号，三个下划线
+```
+&nbsp; ---> 牛皮的spa
+&ensp; ---> 嗯，很舒服的spa
+&emsp; ---> 摁（第四声），很大力的spa
+
+```
+
+### 分隔符
 
 ---
 
 ***
 ___
 
+三个减号，三个星号，三个下划线都可以作为分隔符
+
 ### 对齐
 <p align="left">left</p>  
 <p align="center">center</p>  
 <p align="right">right</p>  
 
+```html
+<p align="left">left</p>  
+<p align="center">center</p>  
+<p align="right">right</p>  
+```
+
 ### 字体
 <font face="黑体">我是黑体字</font>  
-<font face="微软雅黑">我是微软雅黑</font>  
+<font face="STCAIYUN">我是华文彩云</font>  
+<font color=#0099ff size=5 face="黑体">color=#0099ff size=5 face="黑体"</font>  
+<font color=gray size=4>color=gray</font>  
+
+> Size：文本的尺寸大小，可能的值：从 1 到 7 的数字。浏览器默认值是 3  
+> github不支持
+
+```html
+<font face="黑体">我是黑体字</font>  
 <font face="STCAIYUN">我是华文彩云</font>  
 <font color=#0099ff size=7 face="黑体">color=#0099ff size=72 face="黑体"</font>  
-<font color=#00ffff size=72>color=#00ffff</font>  
-<font color=gray size=72>color=gray</font>  
-> Size：规定文本的尺寸大小。可能的值：从 1 到 7 的数字。浏览器默认值是 3
+<font color=gray size=4>color=gray</font>  
+```
 
-### 特殊符号
-\\
-\*
-\_
-\#
-\+
-\-
-\.
-\!<br>
-&#10084;  
-&#10003;  
-
-&copy; &  &uml; &trade; &iexcl; &pound;
-&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot;
-
-X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
-
-18&ordm;C  &quot;  &apos;
-
-
-[more unicode symbols](https://unicode-table.com/cn/)
-
-### emoji
-[github emoji](https://www.webfx.com/tools/emoji-cheat-sheet/)
 
 ---
 ## 图片
 ### 普通图片
 ![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic")
 
+```
+![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic")
+```
+
 ### 带链接的图片（方法一）
 [![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic")](https://blog.csdn.net/ajioy)
+
+```
+[![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic")](https://blog.csdn.net/ajioy)
+```
 
 ### 带链接的图片（方法二）
 [![blog]](https://blog.csdn.net/ajioy)
 [blog]:https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic"
+
+```
+[![blog]](https://blog.csdn.net/ajioy)
+[blog]:https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic"
+```
 
 ### 控制图片大小及对齐方式
 * 方法一，平台通用的标签法
@@ -168,7 +238,9 @@ X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
 
 * 方法三，简书等部分平台支持  
 
-\!\[pic\]\(url\)的基础上加上{:height="300px" width="300px"}
+```
+![pic](url)的基础上加上{:height="300px" width="300px"}
+```
 
 ### 内部引用图片
 todo
@@ -179,17 +251,25 @@ todo
 直接链接2 <https://blog.csdn.net/ajioy>  
 [带标题链接](https://github.com/ajioy)  
 [带标题链接且鼠标悬停](https://blog.csdn.net/ajioy "go to my blog")
+
+```
+直接链接1 https://blog.csdn.net/ajioy  
+直接链接2 <https://blog.csdn.net/ajioy>  
+[带标题链接](https://github.com/ajioy)  
+[带标题链接且鼠标悬停](https://blog.csdn.net/ajioy "go to my blog")
+```
 ---
 
 ## 表格
-| 表头 | 名字 | 分数 |
-|-:| :-: | :- |
-| 101 | ajioy | 99.82 |
-| 102 | scotte | 98.12 |
-| 103 | bot | 97.23 |
+| 序号 | 名字   | 分数  |
+| :--: | :---   | ---:  |
+| 101  | ajioy  | 99.82 |
+| 102  | scotte | 98.12 |
+| 103  | bot    | 97.23 |
 > :--- 左对齐，冒号在左边  
 > ---: 右对齐，冒号在右边  
 > :--: 居中对齐，冒号两边  
+
 
 ---
 
@@ -227,15 +307,49 @@ int main()
 脚注放在文章最下面，脚注可以直接放链接。
 [^1]: 解释名词1  
 [^2]: https://www.google.com 
+
+```
+句中作脚注，解释一个名词[^1]，再解释一个[^2]。  
+脚注放在文章最下面，脚注可以直接放链接。
+[^1]: 解释名词1  
+[^2]: https://www.google.com 
+```
+
 ### 方法二
 整个句子作脚注。^[这里就是脚注内容，默认会生成脚注序号]  
-`有道云`支持，不知道`github`和`evernote`是否支持。
+`有道云`支持。
 
----
+```
+整个句子作脚注。^[这里就是脚注内容，默认会生成脚注序号]  
+```
+
+> github不支持以上两种方式，以下为替代方案
+
+```html
+定义
+<a name="myfootnote1">1</a>: Footnote content goes here
+引用
+<sup>[1](#myfootnote1)</sup>
+```
+我要解释一个名词<sup>[1](#myfootnote1)</sup>
+
+<a name="myfootnote1">1</a>: Footnote content goes here
 
 ## 视频
 以B站为例，点分享按钮，复制`嵌入代码`，粘贴到md文件即可，其他网站类似。
 <iframe src="//player.bilibili.com/player.html?aid=57373164&cid=100164001&page=1" width="600" height="300" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+```html
+<iframe src="//player.bilibili.com/player.html?aid=57373164&cid=100164001&page=1" width="600" height="300" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+```
+> github不支持，用带链接的GIF代替
+
+## 音频
+```html
+<audio id="audio" controls="" preload="none">
+<source id="mp3" src="http://yourmusicurl.mp3">
+</audio>
+```
+> github不支持
 
 ---
 
@@ -246,6 +360,7 @@ int main()
 
 设置好地点、文字、路线、标记后，点获取代码，复制代码，直接放在md文件，或将代码存放在map.html文件，同一目录下，再引入markdown
 
+> github不支持
 ---
 
 ## LaTeX公式
