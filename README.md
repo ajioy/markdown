@@ -189,6 +189,37 @@ ___
 <font color=gray size=4>color=gray</font>  
 ```
 
+### 折叠
+<details>
+<summary>点我展开折叠</summary>
+
+### 说点什么
+
+- 这是个列表
+- 确实是个列表，你真棒  
+
+> 一个小小的引用块🤔  
+
+</details>
+
+
+```html
+
+<details>
+<summary>点我展开折叠</summary>
+
+### 说点什么
+
+- 这是个列表
+- 确实是个列表，你真棒  
+
+> 一个小小的引用块🤔  
+
+</details>
+
+```
+
+> 注意：目前只有github支持
 
 ---
 ## 图片
@@ -196,31 +227,40 @@ ___
 ![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic")
 
 ```
-![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic")
+![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy.jpg "my pic")
 ```
 
-### 带链接的图片（方法一）
+### 带链接的图片（方法一，图片+链接）
 [![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic")](https://blog.csdn.net/ajioy)
 
 ```
-[![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic")](https://blog.csdn.net/ajioy)
+[![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy.jpg "my pic")](https://blog.csdn.net/ajioy)
 ```
 
-### 带链接的图片（方法二）
+### 带链接的图片（方法二，引用式）
+
 [![blog]](https://blog.csdn.net/ajioy)
-[blog]:https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic"
+[blog]: https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic"
+
 
 ```
 [![blog]](https://blog.csdn.net/ajioy)
-[blog]:https://profile.csdnimg.cn/6/3/D/1_ajioy "my pic"
+[blog]: https://profile.csdnimg.cn/6/3/D/1_ajioy.jpg "my pic"
+```
+
+> 大部分平台不支持
+
+### 内部引用图片
+```
+[![SMILE](_pics/smile.gif)](https://blog.csdn.net/ajioy)
+其中SMILE是标题，_pics是md文件所在目录下的子目录，也是图片所在地，smile.gif则是图片名称
 ```
 
 ### 控制图片大小及对齐方式
 * 方法一，平台通用的标签法
 ```html
 <div align="right">
-<img src="https://profile.csdnimg.cn/6/3/D/1_ajioy" width="400px" height="300px">
-<img src="https://profile.csdnimg.cn/6/3/D/1_ajioy" width="400px" height="300px">
+<img src="https://profile.csdnimg.cn/6/3/D/1_ajioy.jpg" width="400px" height="300px">
 </div>
 ```
 <div align="right">
@@ -231,8 +271,8 @@ ___
 \!\[pic\]\(url\)，其中url后面加个空格，再=WIDTHxHEIGHT，HEIGHT可以省略。  
 如 (http://url.jpg =400x300)
 ```markdown
-![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy =400x300)
-![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy =400x)
+![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy.jpg =400x300)
+![pic](https://profile.csdnimg.cn/6/3/D/1_ajioy.jpg =400x)
 ```
 
 
@@ -242,12 +282,10 @@ ___
 ![pic](url)的基础上加上{:height="300px" width="300px"}
 ```
 
-### 内部引用图片
-todo
-
 ---
 ## 链接
-直接链接1 https://blog.csdn.net/ajioy  
+### 行内式
+直接链接1 https://blog.csdn.net/ajioy
 直接链接2 <https://blog.csdn.net/ajioy>  
 [带标题链接](https://github.com/ajioy)  
 [带标题链接且鼠标悬停](https://blog.csdn.net/ajioy "go to my blog")
@@ -257,7 +295,21 @@ todo
 直接链接2 <https://blog.csdn.net/ajioy>  
 [带标题链接](https://github.com/ajioy)  
 [带标题链接且鼠标悬停](https://blog.csdn.net/ajioy "go to my blog")
+
 ```
+### 参考式
+[带标题链接][link]
+[link]: https://blog.cdsn.net/ajioy "Blog"
+
+```
+[带标题链接][link]
+[link]: https://blog.cdsn.net/ajioy "Blog"
+```
+
+> 参考式相对于行内式的优点是，可以在多个不同的位置引用同一个URL，图片也可以用此方式
+
+
+
 ---
 
 ## 表格
@@ -266,6 +318,15 @@ todo
 | 101  | ajioy  | 99.82 |
 | 102  | scotte | 98.12 |
 | 103  | bot    | 97.23 |
+
+```
+| 序号 | 名字   | 分数  |
+| :--: | :---   | ---:  |
+| 101  | ajioy  | 99.82 |
+| 102  | scotte | 98.12 |
+| 103  | bot    | 97.23 |
+```
+
 > :--- 左对齐，冒号在左边  
 > ---: 右对齐，冒号在右边  
 > :--: 居中对齐，冒号两边  
